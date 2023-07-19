@@ -1,6 +1,6 @@
 import '../globals.css'
 
-export default function RootLayout({ children }) {
+export default function StyleLayout({ children }) {
   return (
     <article>{children}</article>
   )
