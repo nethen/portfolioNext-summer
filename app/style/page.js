@@ -7,9 +7,9 @@ import ImageGrid from '@/components/Grids/ImageGrid';
 export default function StyleGuide() {
   return (
     <>
-      <section className="col-span-full lg:col-span-4 lg:sticky lg:h-fit lg:top-[7.5rem]">
+      <section className="col-span-full lg:col-span-4 lg:sticky lg:h-fit lg:top-[7.5rem] mb-32">
         <h1>Style guide</h1>
-        <p>This is a descriptor</p>
+        <p>Tokens, utilities, and a baseline for the visual approach of this portfolio.</p>
       </section>
       <section className="col-span-full lg:col-span-6 lg:col-end-13">
         <div className="element group mb-32">
@@ -45,11 +45,23 @@ export default function StyleGuide() {
           <p>Rather than pure black and white, a neutral palette of browns and beiges provides some warmth when describing the work.</p>
           <figure className="border-t border-grey-500 py-4 my-4">
             <Image src="/img/portrait.png" width={1920} height={2560}></Image>
-            <ImageGrid></ImageGrid>
-            <ImageGrid></ImageGrid>
-            <ImageGrid></ImageGrid>
-            <ImageGrid></ImageGrid>
+            <ImageGrid variant={undefined}></ImageGrid>
+            <ImageGrid variant={undefined}></ImageGrid>
+            <ImageGrid variant={undefined}></ImageGrid>
+            <ImageGrid variant={undefined}></ImageGrid>
           </figure>
+        </div>
+
+        <div className="element group mb-32">
+          <h2>Grid</h2>
+          <p>A 12 column grid is loosely followed to structure all content on the site.</p>
+          <figure className="border-t border-grey-500 py-4 my-4">
+          </figure>
+          <div className="fixed top-0 left-0 right-0 bottom-0 pointer-events-none bg-red-500 z-50 opacity-0">
+            
+
+            
+          </div>
         </div>
         
       </section>
