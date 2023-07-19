@@ -7,6 +7,16 @@ import localFont from 'next/font/local'
 const oracle = localFont({ 
   src: [
     {
+      path: './fonts/oracle/ABCOracle-Book-Trial.woff2',
+      weight: '300',
+      style: 'normal' 
+    },
+    {
+      path: './fonts/oracle/ABCOracle-Book-Trial.woff',
+      weight: '300',
+      style: 'normal' 
+    },
+    {
       path: './fonts/oracle/ABCOracle-Regular-Trial.woff2',
       weight: '400',
       style: 'normal' 

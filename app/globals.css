@@ -4,9 +4,18 @@
 
 @layer base {
   h1 {
-    @apply text-2xl lg:text-5xl;
+    @apply text-4xl lg:text-5xl font-light mb-2;
   }
   h2 {
-    @apply text-xl;
+    @apply text-3xl lg:text-4xl mb-2;
+  }
+  h3 {
+    @apply text-2xl lg:text-3xl mb-2;
+  }
+  p, a{
+    @apply lg:text-xl mb-2
+  }
+  nav *{
+    @apply text-base m-0
   }
 }
