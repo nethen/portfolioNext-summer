@@ -7,11 +7,11 @@ import ImageGrid from '@/components/Grids/ImageGrid';
 export default function StyleGuide() {
   return (
     <>
-      <section className="col-span-full lg:col-span-4 lg:sticky lg:h-fit lg:top-[7.5rem] mb-32">
+      <section className="col-span-full md:col-span-4 md:sticky md:h-fit md:top-[4.5rem] lg:top-[7.5rem] mb-8">
         <h1>Style guide</h1>
         <p>Tokens, utilities, and a baseline for the visual approach of this portfolio.</p>
       </section>
-      <section className="col-span-full lg:col-span-6 lg:col-end-13">
+      <section className="col-span-full md:col-span-8 lg:col-span-6 lg:col-end-13">
         <div className="element group mb-32">
           <h2>Typography</h2>
           <p>All typographic elements are set in <Link href="https://abcdinamo.com/typefaces/oracle" target="_blank">ABC Oracle</Link>&mdash;a clear and legible typeface with a less rigid construction.</p>
