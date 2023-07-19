@@ -1,10 +1,24 @@
+'use client'
+import React from 'react';
+import { useState, useRef } from 'react';
 import Image from 'next/image'
 import Link from "next/link"
 import TextElement from '@/components/StyleGuide/TextElement';
 import ColourElement from '@/components/StyleGuide/ColourElement';
 import ImageGrid from '@/components/Grids/ImageGrid';
+import { motion, useScroll, useMotionValueEvent } from 'framer-motion';
 
 export default function StyleGuide() {
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["end end", "start start"]
+  });
+  const [hookedYPostion, setHookedYPosition] = useState(0);
+  useMotionValueEvent(scrollYProgress, "change", (latest) => {
+    console.log(latest);
+  })
+
   return (
     <>
       <section className="col-span-full md:col-span-4 md:sticky md:h-fit md:top-[4.5rem] lg:top-[7.5rem] mb-8">
@@ -44,7 +58,7 @@ export default function StyleGuide() {
           <h2>Image</h2>
           <p>Rather than pure black and white, a neutral palette of browns and beiges provides some warmth when describing the work.</p>
           <figure className="border-t border-grey-500 py-4 my-4">
-            <Image src="/img/portrait.png" width={1920} height={2560}></Image>
+            <Image src="/img/portrait.png" width={1920} height={2560} alt="it&apos;s me"></Image>
             <ImageGrid variant={undefined}></ImageGrid>
             <ImageGrid variant={undefined}></ImageGrid>
             <ImageGrid variant={undefined}></ImageGrid>
@@ -52,12 +66,13 @@ export default function StyleGuide() {
           </figure>
         </div>
 
-        <div className="element group mb-32">
+        {/* https://codesandbox.io/s/framer-motion-track-element-position-wnzctr?from-embed=&file=/src/App.tsx:23-106 */}
+        <div className="element group mb-32" ref={ref}>
           <h2>Grid</h2>
           <p>A 12 column grid is loosely followed to structure all content on the site.</p>
           <figure className="border-t border-grey-500 py-4 my-4">
           </figure>
-          <div className="fixed top-0 left-0 right-0 bottom-0 pointer-events-none bg-red-500 grid grid-cols-12 gap-x-2 lg:gap-x-4 px-4 lg:px-8 z-50 opacity-0">
+          <div className="fixed top-0 left-0 right-0 bottom-0 pointer-events-none bg-red-500 grid grid-cols-12 gap-x-2 lg:gap-x-4 px-4 lg:px-8 z-50 opacity-10">
             <div className="bg-slate-400"></div>
             <div className="bg-slate-400"></div>
             <div className="bg-slate-400"></div>
