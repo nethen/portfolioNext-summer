@@ -22,7 +22,7 @@ export default function StyleGuide() {
               size="1.25" 
               text="Global Type was developed by It’s Nice That’s Creative Insights team, a new department that carries out research and analyses visual trends in the creative world."
             />
-            <figcaption className="border-t border-grey-500 py-2">Excerpts taken from It's Nice That's article on Global Type (March 15, 2023)</figcaption>
+            <figcaption className="border-t border-grey-500 py-2">Excerpts taken from It&apos;s Nice That&apos;s article on Global Type (March 15, 2023)</figcaption>
           </figure>
         </div>
         <div className="element group mb-32">
