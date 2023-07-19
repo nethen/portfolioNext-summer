@@ -14,7 +14,7 @@ const ImageGrid = (props) => {
         console.log(variant);
     }
     return(
-        <div className="grid grid-cols-6 gap-x-2 lg:gap-x-4  my-2 lg:my-4">
+        <div className="grid grid-cols-6 gap-x-2 lg:gap-x-4 my-2 lg:my-4">
             {variant < 4 && <div className={`${variant % 2 == 0 ? 'col-span-4 h-48' : 'col-span-2 h-32'} bg-black`}></div>}
             {variant >= 2 && <div className={`${variant % 2 == 1 ? 'col-span-4 h-48' : 'col-span-2 h-32'} col-end-7 bg-black`}></div>}
         </div>

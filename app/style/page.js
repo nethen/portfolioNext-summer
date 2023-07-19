@@ -57,10 +57,19 @@ export default function StyleGuide() {
           <p>A 12 column grid is loosely followed to structure all content on the site.</p>
           <figure className="border-t border-grey-500 py-4 my-4">
           </figure>
-          <div className="fixed top-0 left-0 right-0 bottom-0 pointer-events-none bg-red-500 z-50 opacity-0">
-            
-
-            
+          <div className="fixed top-0 left-0 right-0 bottom-0 pointer-events-none bg-red-500 grid grid-cols-12 gap-x-2 lg:gap-x-4 px-4 lg:px-8 z-50 opacity-0">
+            <div className="bg-slate-400"></div>
+            <div className="bg-slate-400"></div>
+            <div className="bg-slate-400"></div>
+            <div className="bg-slate-400"></div>
+            <div className="bg-slate-400"></div>
+            <div className="bg-slate-400"></div>
+            <div className="bg-slate-400"></div>
+            <div className="bg-slate-400"></div>
+            <div className="bg-slate-400"></div>
+            <div className="bg-slate-400"></div>
+            <div className="bg-slate-400"></div>
+            <div className="bg-slate-400"></div>
           </div>
         </div>
         
