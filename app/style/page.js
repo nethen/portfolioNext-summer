@@ -11,7 +11,7 @@ export default function StyleGuide() {
         <h1>Style guide</h1>
         <p>Tokens, utilities, and a baseline for the visual approach of this portfolio.</p>
       </section>
-      <section className="col-span-full md:col-span-8 lg:col-span-6 lg:col-end-13">
+      <section className="col-span-full md:col-span-6 lg:col-span-6 md:col-end-13 lg:col-end-13">
         <div className="element group mb-32">
           <h2>Typography</h2>
           <p>All typographic elements are set in <Link href="https://abcdinamo.com/typefaces/oracle" target="_blank">ABC Oracle</Link>&mdash;a clear and legible typeface with a less rigid construction.</p>
