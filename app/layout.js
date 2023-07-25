@@ -59,7 +59,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${oracle.className}`}>
-        <main className='grid grid-cols-12 gap-x-2 lg:gap-x-4 px-4 lg:px-8 max-lg:mt-16'>
+        <main className='grid grid-cols-12 gap-x-2 lg:gap-x-4 px-4 text-theme lg:px-8 max-lg:mt-16'>
           <Navbar/>
           {children}
         </main>
