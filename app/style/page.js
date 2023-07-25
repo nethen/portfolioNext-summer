@@ -5,7 +5,7 @@ import Image from 'next/image'
 import Link from "next/link"
 import AnimatedLink from '@/components/Nav/AnimatedLink';
 import AnimLink from '@/components/Nav/AnimLink';
-import TextElement from '@/components/StyleGuide/TextElement';
+import {TextElement, LinkElement}  from '@/components/StyleGuide/TextElement';
 import ColourElement from '@/components/StyleGuide/ColourElement';
 import ImageGrid from '@/components/Grids/ImageGrid';
 import { motion, useScroll, useMotionValueEvent, useInView } from 'framer-motion';
@@ -35,7 +35,7 @@ export default function StyleGuide() {
     <>
       <section className="col-span-full md:col-span-4 md:sticky md:h-fit md:top-[4.5rem] lg:top-[7.5rem] mb-8">
         <h1>Style guide</h1>
-        <p>Baseline visual components of this portfolio including <AnimLink href="#type" className="underline">type</AnimLink>, <AnimLink href="#colour" className="underline">colour</AnimLink>, <AnimLink href="#grid" className="underline">grid</AnimLink>, and <AnimLink href="#image" className="underline">image</AnimLink>.</p>
+        <p>Baseline visual components of this portfolio including <AnimLink href="#type">type</AnimLink>, <AnimLink href="#colour">colour</AnimLink>, <AnimLink href="#grid">grid</AnimLink>, and <AnimLink href="#motion">motion</AnimLink>.</p>
       </section>
       <section className="col-span-full md:col-span-6 lg:col-span-6 md:col-end-13 lg:col-end-13">
         
@@ -71,23 +71,24 @@ export default function StyleGuide() {
         {/* https://codesandbox.io/s/framer-motion-track-element-position-wnzctr?from-embed=&file=/src/App.tsx:23-106 */}
         <SideContainer passRef={ref} id="grid">
           <Header header="Grid" sticky={true}>
-            <p>A 12 column grid is loosely followed to structure all content on the site.</p>
+            <p>A 12 column grid is loosely followed to structure a two column layout, showcasing both page overviews and content.</p>
           </Header>
           <figure className="py-4 mb-4 lg:my-8">
+            <ImageGrid variant={undefined}></ImageGrid>
+            <ImageGrid variant={undefined}></ImageGrid>
+            <ImageGrid variant={undefined}></ImageGrid>
+            <ImageGrid variant={undefined}></ImageGrid>
           </figure>
           {<GridOverlay isVisible={isInView}/>}
         </SideContainer>
 
-        <SideContainer id="image">
-          <Header header="Image" sticky={true}>
-            <p>Images are placed structurally within the grid</p>
+        <SideContainer id="Motion">
+          <Header header="Motion" sticky={true}>
+            <p>Using Framer Motion, most interactive elements in motion ease out on a circular curve for a more dynamic appearance.</p>
           </Header>
           <figure className="py-4 mb-4 lg:my-8">
             <Image src="/img/portrait.png" width={1920} height={2560} alt="it&apos;s me"></Image>
-            <ImageGrid variant={undefined}></ImageGrid>
-            <ImageGrid variant={undefined}></ImageGrid>
-            <ImageGrid variant={undefined}></ImageGrid>
-            <ImageGrid variant={undefined}></ImageGrid>
+            <LinkElement text="A sample link" href="#type"/>
           </figure>
         </SideContainer>
         

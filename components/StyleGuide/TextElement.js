@@ -1,14 +1,15 @@
 'use client'
 import useWindowDimensions from '@/hooks/useWindowDimensions';
+import AnimLink from '../Nav/AnimLink';
 
-const TextElement = (props, ...children) => {
+export const TextElement = (props, ...children) => {
     const viewport = useWindowDimensions();
     const types = {
 
     }
 
     return(
-        <div className="mb-4">
+        <div className="mb-6">
             {props.type.toLowerCase() == "h1" && <h1>{props.text}</h1>}
             {props.type.toLowerCase() == "h2" && <h2>{props.text}</h2>}
             {props.type.toLowerCase() == "h3" && <h3>{props.text}</h3>}
@@ -22,4 +23,19 @@ const TextElement = (props, ...children) => {
     )
 }
 
-export default TextElement;
+export const LinkElement = (props, ...children) => {
+    const viewport = useWindowDimensions();
+    const types = {
+
+    }
+
+    return(
+        <div className="mb-6">
+            <p><AnimLink href={props.href}>{props.text}</AnimLink></p>
+            <div className="flex gap-x-4 text-theme-caption">
+                <span>Link</span>
+                <span>Variable size (inherit)</span>
+            </div>
+        </div>
+    )
+}

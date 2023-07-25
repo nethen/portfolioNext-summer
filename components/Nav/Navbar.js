@@ -7,7 +7,7 @@ const Navbar = () => {
                 <div className="col-span-6 sm:col-span-3 lg:col-span-2 flex">
                     <Link href="/" className="">Nathan Lew</Link>
                 </div>
-                <p className="hidden sm:block sm:col-span-3 lg:col-span-2 opacity-30">Product designer</p>
+                <p className="hidden sm:block sm:col-span-3 lg:col-span-2 text-theme-caption">Product designer</p>
                 <div className="col-span-6 sm:col-span-3 flex justify-end col-end-13 sm:col-end-13">
                     <Link href="style" className="">Style guide</Link>
                 </div>
