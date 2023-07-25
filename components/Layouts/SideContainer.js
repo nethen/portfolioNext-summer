@@ -1,6 +1,6 @@
-const SideContainer = ({ id, ref, children }) => {
+const SideContainer = ({ id, passRef, children }) => {
     return(
-        <div className='pt-8 group mb-16' id={id} ref={ref}>
+        <div className='pt-8 group mb-16' id={id} ref={passRef}>
             { children }
         </div>
     )

@@ -14,7 +14,7 @@ const TextElement = (props, ...children) => {
             {props.type.toLowerCase() == "h3" && <h3>{props.text}</h3>}
             {props.type.toLowerCase() == "h4" && <h4>{props.text}</h4>}
             {(props.type.toLowerCase() == "p" || props.type.toLowerCase() == "paragraph") && <p>{props.text}</p>}
-            <div className="flex gap-x-4 opacity-30">
+            <div className="flex gap-x-4 text-theme-caption">
                 <span>{ props.type }</span>
                 <span>{props.size}rem</span>
             </div>

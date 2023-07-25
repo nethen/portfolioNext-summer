@@ -4,12 +4,13 @@ import { useState, useRef } from 'react';
 import Image from 'next/image'
 import Link from "next/link"
 import AnimatedLink from '@/components/Nav/AnimatedLink';
+import AnimLink from '@/components/Nav/AnimLink';
 import TextElement from '@/components/StyleGuide/TextElement';
 import ColourElement from '@/components/StyleGuide/ColourElement';
 import ImageGrid from '@/components/Grids/ImageGrid';
 import { motion, useScroll, useMotionValueEvent, useInView } from 'framer-motion';
 import GridOverlay from '@/components/Grids/GridOverlay';
-import StickyHeader from '@/components/Layouts/StickyHeader';
+import Header from '@/components/Layouts/Header';
 import SideContainer from '@/components/Layouts/SideContainer';
 
 export default function StyleGuide() {
@@ -34,14 +35,14 @@ export default function StyleGuide() {
     <>
       <section className="col-span-full md:col-span-4 md:sticky md:h-fit md:top-[4.5rem] lg:top-[7.5rem] mb-8">
         <h1>Style guide</h1>
-        <p>Baseline visual components of this portfolio including <Link href="#type" className="underline">type</Link>, <Link href="#colour" className="underline">colour</Link>, <Link href="#grid" className="underline">grid</Link>, and <Link href="#image" className="underline">image</Link>.</p>
+        <p>Baseline visual components of this portfolio including <AnimLink href="#type" className="underline">type</AnimLink>, <AnimLink href="#colour" className="underline">colour</AnimLink>, <AnimLink href="#grid" className="underline">grid</AnimLink>, and <AnimLink href="#image" className="underline">image</AnimLink>.</p>
       </section>
       <section className="col-span-full md:col-span-6 lg:col-span-6 md:col-end-13 lg:col-end-13">
         
         <SideContainer id="type">
-          <StickyHeader header="Typography">
-            <p>All typographic elements are set in <Link href="https://abcdinamo.com/typefaces/oracle" target="_blank">ABC Oracle</Link>&mdash;a clear and legible typeface with a less rigid construction.</p>
-          </StickyHeader>
+          <Header header="Typography" sticky={true}>
+            <p>All typographic elements are set in <AnimLink href="https://abcdinamo.com/typefaces/oracle" target="_blank">ABC Oracle</AnimLink>&mdash;a clear and legible typeface with a less rigid construction.</p>
+          </Header>
           <figure className="py-4 mb-4 lg:my-8">
             <TextElement type="H1" size="3" text="Global Type"/>
             <TextElement type="H2" size="2" text="100 foundries showcasing the power of the letterform"/>
@@ -51,36 +52,36 @@ export default function StyleGuide() {
               size="1.25" 
               text="Global Type was developed by It’s Nice That’s Creative Insights team, a new department that carries out research and analyses visual trends in the creative world."
             />
-            <figcaption className="border-t border-grey-500 py-2">Excerpts taken from It&apos;s Nice That&apos;s article on Global Type (March 15, 2023)</figcaption>
+            <figcaption className="border-t border-grey-500 py-2">Excerpts taken from <AnimLink href="https://www.itsnicethat.com/features/global-type-around-the-world-in-100-foundries-insights-graphic-design-150323" target="_blank">It&apos;s Nice That&apos;s article on Global Type</AnimLink> (March 15, 2023)</figcaption>
           </figure>
         </SideContainer>
 
         <SideContainer id="colour">
-          <StickyHeader header="Colour">
+          <Header header="Colour" sticky={true}>
             <p>Rather than pure black and white, a neutral palette of browns and beiges provides some warmth when describing the work.</p>    
-          </StickyHeader>
+          </Header>
           <figure className="py-4 mb-4 lg:my-8">
             <ColourElement desc="Primary&mdash;body text, headings, hover for secondary" colour="#615245"/>
-            <ColourElement desc="Secondary&mdash;captions and labels" colour="#A09083" />
-            <ColourElement desc="Placeholder&mdash;low contrast text" colour="#CABEB4" />
+            <ColourElement desc="Secondary&mdash;captions and labels" colour="#BAAFA6" />
+            <ColourElement desc="Placeholder&mdash;low contrast text" colour="#DBD3CD" />
             <ColourElement desc="Background" colour="#EFEDEB" darkText={true}/>
           </figure>
         </SideContainer>
 
         {/* https://codesandbox.io/s/framer-motion-track-element-position-wnzctr?from-embed=&file=/src/App.tsx:23-106 */}
-        <SideContainer ref={ref} id="grid">
-          <StickyHeader header="Grid">
+        <SideContainer passRef={ref} id="grid">
+          <Header header="Grid" sticky={true}>
             <p>A 12 column grid is loosely followed to structure all content on the site.</p>
-          </StickyHeader>
+          </Header>
           <figure className="py-4 mb-4 lg:my-8">
           </figure>
           {<GridOverlay isVisible={isInView}/>}
         </SideContainer>
 
         <SideContainer id="image">
-          <StickyHeader header="Image">
+          <Header header="Image" sticky={true}>
             <p>Images are placed structurally within the grid</p>
-          </StickyHeader>
+          </Header>
           <figure className="py-4 mb-4 lg:my-8">
             <Image src="/img/portrait.png" width={1920} height={2560} alt="it&apos;s me"></Image>
             <ImageGrid variant={undefined}></ImageGrid>

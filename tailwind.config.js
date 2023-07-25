@@ -14,8 +14,8 @@ module.exports = {
       },
       colors: {
         'theme': '#615245',
-        'theme-caption' : '#A09083',
-        'theme-placeholder' : '#CABEB4'
+        'theme-caption' : '#BAAFA6',
+        'theme-placeholder' : '#DBD3CD'
       }
     },
   },
