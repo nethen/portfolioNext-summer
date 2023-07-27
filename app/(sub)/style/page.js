@@ -2,8 +2,7 @@
 import React, { useEffect } from 'react';
 import { useState, useRef } from 'react';
 import Image from 'next/image'
-import Link from "next/link"
-import AnimatedLink from '@/components/Nav/AnimatedLink';
+import Navbar from '@/components/Nav/Navbar'
 import AnimLink from '@/components/Nav/AnimLink';
 import {TextElement, LinkElement}  from '@/components/StyleGuide/TextElement';
 import ColourElement from '@/components/StyleGuide/ColourElement';
@@ -15,7 +14,7 @@ import SideContainer from '@/components/Layouts/SideContainer';
 
 export default function StyleGuide() {
   const ref = useRef(null);
-  const isInView = useInView(ref);
+  const isInView = useInView(ref, {amount: 0.25});
   // const { scrollYProgress } = useScroll({
   //   target: ref,
   //   offset: ["end end", "start start"]
@@ -33,11 +32,12 @@ export default function StyleGuide() {
 
   return (
     <>
+      <Navbar/>
       <section className="col-span-full md:col-span-4 md:sticky md:h-fit md:top-[4.5rem] lg:top-[7.5rem] mb-8">
         <h1>Style guide</h1>
         <p>Baseline visual components of this portfolio including <AnimLink href="#type">type</AnimLink>, <AnimLink href="#colour">colour</AnimLink>, <AnimLink href="#grid">grid</AnimLink>, and <AnimLink href="#motion">motion</AnimLink>.</p>
       </section>
-      <section className="col-span-full md:col-span-6 lg:col-span-6 md:col-end-13 lg:col-end-13">
+      <section className="col-span-full md:col-span-6 md:col-end-13">
         
         <SideContainer id="type">
           <Header header="Typography" sticky={true}>
@@ -64,7 +64,7 @@ export default function StyleGuide() {
             <ColourElement desc="Primary&mdash;body text, headings, hover for secondary" colour="#615245"/>
             <ColourElement desc="Secondary&mdash;captions and labels" colour="#BAAFA6" />
             <ColourElement desc="Placeholder&mdash;low contrast text" colour="#DBD3CD" />
-            <ColourElement desc="Background" colour="#EFEDEB" darkText={true}/>
+            <ColourElement desc="Background&mdash;layers ands figures" colour="#EFEDEB" darkText={true}/>
           </figure>
         </SideContainer>
 

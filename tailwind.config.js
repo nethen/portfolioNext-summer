@@ -15,7 +15,8 @@ module.exports = {
       colors: {
         'theme': '#615245',
         'theme-caption' : '#BAAFA6',
-        'theme-placeholder' : '#DBD3CD'
+        'theme-placeholder' : '#DBD3CD',
+        'theme-background': '#EFEDEB'
       }
     },
   },
