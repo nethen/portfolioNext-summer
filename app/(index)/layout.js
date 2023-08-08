@@ -51,7 +51,7 @@ const oracle = localFont({
  
 export const metadata = {
   title: 'Nathan Lew',
-  description: 'Product designer crafting spaces on the internet with a love for solving for logic, new aesthetics and strategy',
+  description: 'Product designer crafting spaces on the internet, solving for logic and new aesthetics with strategy',
 }
 
 export default function RootLayout({ children }) {
