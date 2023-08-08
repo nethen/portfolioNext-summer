@@ -34,7 +34,7 @@ export default function ProjectPage({ params }) {
     <>
       <Navbar/>
       <section className="col-span-full md:col-span-4 3xl:col-span-3 md:sticky md:h-fit md:top-[4.5rem] lg:top-[7.5rem] mb-8">
-        <h1>Style guide</h1>
+        <h1>{params.slug}</h1>
         <p>Baseline visual components of this portfolio including <AnimLink href="#type">type</AnimLink>, <AnimLink href="#colour">colour</AnimLink>, <AnimLink href="#grid">grid</AnimLink>, and <AnimLink href="#motion">motion</AnimLink>.</p>
       </section>
       <section className="col-span-full md:col-span-6 md:col-end-13">
@@ -55,43 +55,6 @@ export default function ProjectPage({ params }) {
             <figcaption className="border-t border-grey-500 py-2">Excerpts taken from <AnimLink href="https://www.itsnicethat.com/features/global-type-around-the-world-in-100-foundries-insights-graphic-design-150323" target="_blank">It&apos;s Nice That&apos;s article on Global Type</AnimLink> (March 15, 2023)</figcaption>
           </figure>
         </SideContainer>
-
-        <SideContainer id="colour">
-          <Header header="Colour" sticky={true}>
-            <p>Rather than pure black and white, a neutral palette of browns and beiges provides some warmth when describing the work.</p>    
-          </Header>
-          <figure className="py-4 mb-4 lg:my-8">
-            <ColourElement desc="Primary&mdash;body text, headings, hover for secondary" colour="#615245"/>
-            <ColourElement desc="Secondary&mdash;captions and labels" colour="#BAAFA6" />
-            <ColourElement desc="Placeholder&mdash;low contrast text" colour="#DBD3CD" />
-            <ColourElement desc="Background&mdash;layers ands figures" colour="#EFEDEB" darkText={true}/>
-          </figure>
-        </SideContainer>
-
-        {/* https://codesandbox.io/s/framer-motion-track-element-position-wnzctr?from-embed=&file=/src/App.tsx:23-106 */}
-        <SideContainer passRef={ref} id="grid">
-          <Header header="Grid" sticky={true}>
-            <p>A 12 column grid is loosely followed to structure a two column layout, showcasing both page overviews and content.</p>
-          </Header>
-          <figure className="py-4 mb-4 lg:my-8">
-            <ImageGrid variant={undefined}></ImageGrid>
-            <ImageGrid variant={undefined}></ImageGrid>
-            <ImageGrid variant={undefined}></ImageGrid>
-            <ImageGrid variant={undefined}></ImageGrid>
-          </figure>
-          {<GridOverlay isVisible={isInView}/>}
-        </SideContainer>
-
-        <SideContainer id="Motion">
-          <Header header="Motion" sticky={true}>
-            <p>Using Framer Motion, most interactive elements in motion ease out on a circular curve for a more dynamic appearance.</p>
-          </Header>
-          <figure className="py-4 mb-4 lg:my-8">
-            <Image src="/img/portrait.png" width={1920} height={2560} alt="it&apos;s me"></Image>
-            <LinkElement text="A sample link" href="#type"/>
-          </figure>
-        </SideContainer>
-        
       </section>
     </>
   )
