@@ -12,7 +12,7 @@ import GridOverlay from '@/components/Grids/GridOverlay';
 import Header from '@/components/Layouts/Header';
 import SideContainer from '@/components/Layouts/SideContainer';
 
-export default function StyleGuide() {
+export default function ProjectPage({ params }) {
   const ref = useRef(null);
   const isInView = useInView(ref, {amount: 0.25});
   // const { scrollYProgress } = useScroll({
