@@ -17,19 +17,20 @@ export default function ProjectPage({ params }) {
   return (
     <>
       <Navbar/>
-      <section className="col-span-full md:mt-[4.5rem] lg:mt-[7.5rem] mb-4">
+      {/* <section className="col-span-full md:mt-[4.5rem] lg:mt-[7.5rem] mb-4">
+        <h1>Dictionary+</h1>
+        <p>A 3 week UX design project, serving skincare science to the uninitiated</p> */}
+        {/* <Image src="/img/deciem/header2.png" width={2880} height={1620}/> */}
+      {/* </section> */}
+      <section className="col-span-full md:col-span-5 md:sticky md:h-[calc(100vh-4rem)] md:top-14 md:pt-6 lg:pt-8 mb-4 overflow-y-auto">
+        <motion.figure 
+          className="@container flex justify-center items-center bg-theme-background mb-4"> 
+                <motion.video 
+                className="p-4 @sm:p-8 @lg:p-12"
+                disablePictureInPicture playsInline muted autoPlay loop src="https://www.sfu.ca/~nla61/videos/deciem/micro_intro.mp4"></motion.video>
+        </motion.figure>
         <h1>Dictionary+</h1>
         <p>A 3 week UX design project, serving skincare science to the uninitiated</p>
-        {/* <Image src="/img/deciem/header2.png" width={2880} height={1620}/> */}
-      </section>
-      <section className="col-span-full md:col-span-5 md:sticky md:h-[calc(100vh-4rem)] md:top-14 md:pt-6 lg:pt-8 mb-4 overflow-y-auto">
-        <figure 
-          m
-          className="absolute @container flex justify-center items-center bg-theme-background mb-4"> 
-                <video 
-                className="p-4 @sm:p-8 @lg:p-12"
-                disablePictureInPicture playsInline muted autoPlay loop src="https://www.sfu.ca/~nla61/videos/deciem/micro_intro.mp4"></video>
-        </figure>
       </section>
       <section className="col-span-full md:col-span-6 md:col-end-13">
         

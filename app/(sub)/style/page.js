@@ -39,7 +39,7 @@ export default function StyleGuide() {
       </section>
       <section className="col-span-full md:col-span-6 md:col-end-13">
         
-        <SideContainer paddingTop={true} id="type">
+        <SideContainer id="type">
           <Header header="Typography" sticky={true}>
             <p>All typographic elements are set in <AnimLink href="https://abcdinamo.com/typefaces/oracle" target="_blank">ABC Oracle</AnimLink>&mdash;a clear and legible typeface with a less rigid construction.</p>
           </Header>
@@ -56,7 +56,7 @@ export default function StyleGuide() {
           </figure>
         </SideContainer>
 
-        <SideContainer paddingTop={true} id="colour">
+        <SideContainer id="colour">
           <Header header="Colour" sticky={true}>
             <p>Rather than pure black and white, a neutral palette of browns and beiges provides some warmth when describing the work.</p>    
           </Header>
@@ -69,7 +69,7 @@ export default function StyleGuide() {
         </SideContainer>
 
         {/* https://codesandbox.io/s/framer-motion-track-element-position-wnzctr?from-embed=&file=/src/App.tsx:23-106 */}
-        <SideContainer paddingTop={true} passRef={ref} id="grid">
+        <SideContainer passRef={ref} id="grid">
           <Header header="Grid" sticky={true}>
             <p>A 12 column grid is loosely followed to structure a two column layout, showcasing both page overviews and content.</p>
           </Header>
@@ -82,7 +82,7 @@ export default function StyleGuide() {
           {<GridOverlay isVisible={isInView}/>}
         </SideContainer>
 
-        <SideContainer paddingTop={true} id="Motion">
+        <SideContainer id="motion">
           <Header header="Motion" sticky={true}>
             <p>Using Framer Motion, most interactive elements in motion ease out on a circular curve for a more dynamic appearance.</p>
           </Header>
