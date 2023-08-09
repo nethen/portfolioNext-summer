@@ -42,7 +42,7 @@ export default function ProjectPage({ params }) {
           "
           >
             <p className="md:pt-6 lg:pt-8 mb-4">
-              Dictionary+ is a feature proposal for The Ordinary's online store, clarifying how specific active ingredients help achieve long-term goals.
+              Dictionary+ is a feature proposal for The Ordinary&apos;s online store, clarifying how specific active ingredients help achieve long-term goals.
             </p>
           </Header>
           <p className="pt-4 my-4">
@@ -56,7 +56,7 @@ export default function ProjectPage({ params }) {
 
         <SideContainer>
           <p className="pt-4 my-4">
-            The initial insight for this project was a question of "how much information is too much information?"
+            The initial insight for this project was a question of &quot;how much information is too much information?&quot;
             Despite all ingredients listed on the side of each product box, we wanted to see if chemical jargon was being understood by skincare consumers.
           </p>
           <p className="pt-4 my-4">
@@ -64,7 +64,7 @@ export default function ProjectPage({ params }) {
             At this early research stage, I also led a survey to get a better sense of how users from ages 18 to 23 select their skincare. 
           </p>
           <p className="pt-4 my-4">
-            With 88 responses and a variety of readings, here's what we learned:
+            With 88 responses and a variety of readings, here&apos;s what we learned:
           </p>
           <Header3 header="The benefit needs to be clear">
             <p className="text-base text-theme-caption">
