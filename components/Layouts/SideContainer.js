@@ -1,6 +1,6 @@
-const SideContainer = ({ id, passRef, children }) => {
+const SideContainer = ({ id, passRef, paddingTop, children }) => {
     return(
-        <div className='pt-8 group mb-16' id={id} ref={passRef}>
+        <div className={`${paddingTop && `pt-8`} group mb-32`} id={id} ref={passRef}>
             { children }
         </div>
     )

@@ -1,5 +1,5 @@
 'use client'
-import useWindowDimensions from '@/hooks/useWindowDimensions';
+import useWindowDimensions from '/hooks/useWindowDimensions';
 import AnimLink from '../Nav/AnimLink';
 
 export const TextElement = (props, ...children) => {

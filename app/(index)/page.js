@@ -1,7 +1,7 @@
 'use client'
 import Image from 'next/image'
 import Link from 'next/link'
-import AnimLink from '@/components/Nav/AnimLink';
+import AnimLink from '/components/Nav/AnimLink';
 
 export default function Home() {
   return (
@@ -14,7 +14,7 @@ export default function Home() {
       </div>
     </section>
     <section className="col-span-full md:col-span-6 md:col-end-13 lg:mt-8">
-      <Link href="https://google.com">
+      <Link href="/projects/deciem">
         <Image 
           className='mb-4'
           src={"/img/deciem.png"}

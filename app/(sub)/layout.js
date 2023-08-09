@@ -1,4 +1,4 @@
-import '@/app/globals.css'
+import '/app/globals.css'
 import localFont from 'next/font/local'
  
 // Font files can be colocated inside of `pages`
@@ -58,7 +58,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${oracle.className}`}>
-        <main className='grid grid-cols-12 gap-x-2 lg:gap-x-4 px-4 text-theme lg:px-8 max-lg:mt-16'>
+        <main className='grid grid-cols-12 gap-x-2 md:gap-x-4 lg:gap-x-8 px-4 text-theme lg:px-8 max-lg:mt-16'>
           {children}
         </main>
       </body>
