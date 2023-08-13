@@ -14,7 +14,7 @@ export default function Home() {
       </div>
     </section>
     <section className="col-span-full md:col-span-6 md:col-end-13 lg:mt-8">
-      <Link href="/projects/dictionaryplus" scroll={false}>
+      <Link href="/projects/dictionaryplus" className="hover:opacity-50 duration-300 ease-out" scroll={false}>
         <Image 
           src={"/img/deciem.png"}
           width={1440} 
@@ -23,7 +23,7 @@ export default function Home() {
         <h2 className="text-base mt-4 mb-1">Dictionary+</h2>
         <p className="text-base text-theme-caption mb-16">A 3 week UX design project</p>
       </Link>
-      <Link href="/projects/xergoy" scroll={false}>
+      <Link href="/projects/xergoy" scroll={false} className="hover:opacity-50 duration-300 ease-out">
         <Image 
           src={"/img/xergoy.png"}
           width={1440} 
