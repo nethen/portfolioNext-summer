@@ -15,7 +15,7 @@ const GridOverlay = ({isVisible}) => {
         <AnimatePresence>
             {isVisible && (<motion.div 
                 key="overlay"
-                className="fixed top-0 left-0 right-0 bottom-0 pointer-events-none grid grid-cols-12 gap-x-2 lg:gap-x-4 px-4 lg:px-8 z-50"
+                className="fixed top-0 left-0 right-0 bottom-0 pointer-events-none grid grid-cols-12 gap-x-2 md:gap-x-4 lg:gap-x-8 px-4 lg:px-8 z-50"
                 variants={variants}
                 initial="hidden"
                 animate="visible"

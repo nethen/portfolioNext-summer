@@ -15,7 +15,7 @@ const ImageGrid = (props) => {
         console.log(variant);
     }
     return(
-        <motion.div className="grid grid-cols-6 gap-x-2 lg:gap-x-4 my-2 lg:my-4" onClick={test}>
+        <motion.div className="grid grid-cols-6 gap-x-2 md:gap-x-4 lg:gap-x-8 my-2 lg:my-4" onClick={test}>
             <AnimatePresence>
                 {variant < 4 && 
                 <motion.div 

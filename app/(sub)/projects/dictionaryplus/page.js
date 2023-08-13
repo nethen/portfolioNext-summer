@@ -8,30 +8,56 @@ import {TextElement, LinkElement}  from '/components/StyleGuide/TextElement';
 import ColourElement from '/components/StyleGuide/ColourElement';
 import ImageGrid from '/components/Grids/ImageGrid';
 import { motion, useScroll, useMotionValueEvent, useInView } from 'framer-motion';
+import { useWindowDimensions } from "/hooks/useWindowDimensions"
 import GridOverlay from '/components/Grids/GridOverlay';
 import { Header, Header3 } from '/components/Layouts/Header';
 import SideContainer from '/components/Layouts/SideContainer';
 
 
 export default function ProjectPage({ params }) {
+  const viewport = useWindowDimensions();
+
+  const { scrollYProgress } = useScroll();
+  const [hookedYPosition, setHookedYPosition] = useState(0);
+  useMotionValueEvent(scrollYProgress, "change", (latest) => {
+    setHookedYPosition(latest);
+  })
+
+
   return (
     <>
-      <Navbar/>
       {/* <section className="col-span-full md:mt-[4.5rem] lg:mt-[7.5rem] mb-4">
         <h1>Dictionary+</h1>
         <p>A 3 week UX design project, serving skincare science to the uninitiated</p> */}
         {/* <Image src="/img/deciem/header2.png" width={2880} height={1620}/> */}
       {/* </section> */}
-      <section className="col-span-full md:col-span-5 md:sticky md:h-[calc(100vh-4rem)] md:top-14 md:pt-6 lg:pt-8 mb-4 overflow-y-auto">
+      <motion.section 
+        initial={false}
+        animate={{
+          // width: hookedYPosition > 0 ?  "100%" : `calc(100vw - ${viewport.width < 1024 ? 2 : 4 }rem)`
+          // paddingRight: "1000px"
+        }}
+        className="col-span-full md:col-span-5 md:sticky md:h-[calc(100vh-4rem)] md:top-14 md:pt-6 lg:pt-8 mb-4 overflow-y-auto pointer-events-none">
+        <h1
+          style={{
+            width: "calc(100vw - 2rem)"
+          }}
+        >
+          Dictionary+
+        </h1>
+        <p 
+        style={{
+          width: `calc((5 * (100vw - ${viewport.width < 1024 ? 12 : 24 }rem) / 12))`
+        }}
+        className="text-base text-theme-caption">A 3 week UX design project, serving skincare science to the uninitiated</p>
         <motion.figure 
           className="@container flex justify-center items-center bg-theme-background mb-4"> 
                 <motion.video 
                 className="p-4 @sm:p-8 @lg:p-12"
                 disablePictureInPicture playsInline muted autoPlay loop src="https://www.sfu.ca/~nla61/videos/deciem/micro_intro.mp4"></motion.video>
         </motion.figure>
-        <h1>Dictionary+</h1>
-        <p>A 3 week UX design project, serving skincare science to the uninitiated</p>
-      </section>
+        
+      </motion.section>
       <section className="col-span-full md:col-span-6 md:col-end-13">
         
         <SideContainer>
@@ -115,6 +141,12 @@ export default function ProjectPage({ params }) {
         </SideContainer>
 
         <SideContainer id="solution">
+          <p className="pt-4 my-4">
+            Dictionary+ is a feature proposal to natively surface the relationship between an ingredient and a customer&apos;s skincare goal. 
+            By indicating how each ingredient reacts with the skin, along with 
+          </p>
+        </SideContainer>
+        <SideContainer>
           <p className="pt-4 my-4">
             Knowing that customers are relatively aware of different ingredients, Dictionary+ is a feature proposal to natively search for pr
           </p>

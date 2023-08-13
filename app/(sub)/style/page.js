@@ -15,20 +15,6 @@ import SideContainer from '/components/Layouts/SideContainer';
 export default function StyleGuide() {
   const ref = useRef(null);
   const isInView = useInView(ref, {amount: 0.25});
-  // const { scrollYProgress } = useScroll({
-  //   target: ref,
-  //   offset: ["end end", "start start"]
-  // });
-  const [hookedYPosition, setHookedYPosition] = useState(0);
-  const [hookedView, setHookedView] = useState(false);
-  // useMotionValueEvent(scrollYProgress, "change", (latest) => {
-  //   setHookedYPosition(latest);
-  // })
-
-  useEffect(() => {
-    setHookedView(isInView);
-    console.log(isInView);
-  }, [isInView])
 
   return (
     <>

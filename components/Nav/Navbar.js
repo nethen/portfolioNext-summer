@@ -1,8 +1,16 @@
+'use client'
 import Link from 'next/link';
 import { usePathname } from 'next/navigation'
+import { Paths } from "/data/paths"
+
+const convertPath = () => {
+    const pathName = usePathname().split("/").slice(-1);
+    return Paths[pathName];
+}
 
 const Navbar = () => {
-    const pathName = usePathname();
+    const pathName = convertPath();
+    // console.log(pathNameConv);
     return(
         <header className="col-span-full h-fit fixed top-0 left-0 right-0 p-4 lg:p-8 bg-white z-50">
             <nav className="grid grid-cols-12 gap-x-2 md:gap-x-4 lg:gap-x-8 ">

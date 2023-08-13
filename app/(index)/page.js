@@ -14,7 +14,7 @@ export default function Home() {
       </div>
     </section>
     <section className="col-span-full md:col-span-6 md:col-end-13 lg:mt-8">
-      <Link href="/projects/deciem">
+      <Link href="/projects/dictionaryplus">
         <Image 
           className='mb-4'
           src={"/img/deciem.png"}
