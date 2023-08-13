@@ -37,7 +37,7 @@ export default function ProjectPage({ params }) {
           // width: hookedYPosition > 0 ?  "100%" : `calc(100vw - ${viewport.width < 1024 ? 2 : 4 }rem)`
           // paddingRight: "1000px"
         }}
-        className="col-span-full md:col-span-5 md:sticky md:h-[calc(100vh-4rem)] md:top-14 md:pt-6 lg:pt-8 mb-4 overflow-y-auto pointer-events-none">
+        className="col-span-full md:col-span-5 md:sticky md:h-[calc(100vh-4rem)] md:top-[4.5rem] lg:top-[7.5rem] mb-4 overflow-y-auto pointer-events-none">
         <h1
           style={{
             width: "calc(100vw - 2rem)"
@@ -47,7 +47,7 @@ export default function ProjectPage({ params }) {
         </h1>
         <p 
         style={{
-          width: `calc((5 * (100vw - ${viewport.width < 1024 ? 12 : 24 }rem) / 12))`
+          // width: `calc((5 * (100vw - ${viewport.width < 1024 ? 12 : 24 }rem) / 12))`
         }}
         className="text-base text-theme-caption">A 3 week UX design project, serving skincare science to the uninitiated</p>
         <motion.figure 
@@ -82,6 +82,7 @@ export default function ProjectPage({ params }) {
         </SideContainer>
 
         <SideContainer>
+          <Header header="First framing" sticky={true}/>
           <p className="pt-4 my-4">
             The initial insight for this project was a question of &quot;how much information is too much information?&quot;
             Despite all ingredients listed on the side of each product box, we wanted to see if chemical jargon was being understood by skincare consumers.
@@ -119,6 +120,7 @@ export default function ProjectPage({ params }) {
         </SideContainer>
 
         <SideContainer>
+          <Header header="Reframing" sticky={true}/>
           <p className="pt-4 my-4">
             One popular implementation of online recommendations was the questionnaire: a guided process of indicating the severity of a skincare concern and matching up with the right product.
           </p>
@@ -137,19 +139,69 @@ export default function ProjectPage({ params }) {
           <p className="pt-4 my-4">
             This provided our final framing for the project:
           </p>
-          <Header header="How might we relay active ingredients more effectively for novice consumers of The Ordinary?"/>
+          <Header header="How might we embed details on active ingredients more effectively for novice consumers of The Ordinary?"/>
         </SideContainer>
 
         <SideContainer id="solution">
-          <p className="pt-4 my-4">
-            Dictionary+ is a feature proposal to natively surface the relationship between an ingredient and a customer&apos;s skincare goal. 
-            By indicating how each ingredient reacts with the skin, along with 
+          <Header header="Solution"/>
+          <p className="pt-4 my-4 mb-16">
+            Dictionary+ is a feature proposal that embeds ingredient information throughout the shopping experience, highlighting the relationship with a customer&apos;s skincare goal. 
           </p>
-        </SideContainer>
-        <SideContainer>
-          <p className="pt-4 my-4">
-            Knowing that customers are relatively aware of different ingredients, Dictionary+ is a feature proposal to natively search for pr
+
+          <h3>Onboarding on first visit</h3>
+          <p className="text-base my-4">
+          Users meet Dictionary+ through a modal highlighting the icon in the newly simplified navbar. This message can be ignored or set as a reminder for the next time they visit.
           </p>
+          <motion.figure 
+          className="@container flex justify-center items-center bg-theme-background mb-16"> 
+                <motion.video 
+                className="p-4 @sm:p-8 @lg:p-12"
+                disablePictureInPicture playsInline muted autoPlay loop src="https://www.sfu.ca/~nla61/videos/deciem/micro_onboarding.mp4"></motion.video>
+          </motion.figure>
+
+          <h3>Entry from product pages</h3>
+          <p className="text-base my-4">
+          Tooltips on hover clarify chemical jargon and redirect users to Dictionary+ for further insight. By clicking the call to action, users can quickly review ingredient info and browse related products.
+          </p>
+          <motion.figure 
+          className="@container flex justify-center items-center bg-theme-background mb-16"> 
+                <motion.video 
+                className="p-4 @sm:p-8 @lg:p-12"
+                disablePictureInPicture playsInline muted autoPlay loop src="https://www.sfu.ca/~nla61/videos/deciem/micro_hover.mp4"></motion.video>
+          </motion.figure>
+
+          <h3>Hide unwanted ingredients</h3>
+          <p className="text-base my-4">
+          Ingredients that clash with one’s existing regimen can be filtered out of the product listing pages on future visits.
+          </p>
+          <motion.figure 
+          className="@container flex justify-center items-center bg-theme-background mb-8"> 
+                <Image src="/img/deciem/hide_ingredients.png" width="1512" height="982" alt="Microinteraction: hide ingredients via toggle" className="p-4 @sm:p-8 @lg:p-12"></Image>
+          </motion.figure>
+
+          <motion.figure 
+          className="@container flex justify-center items-center bg-theme-background mb-16"> 
+                <motion.video 
+                className="p-4 @sm:p-8 @lg:p-12"
+                disablePictureInPicture playsInline muted autoPlay loop src="https://www.sfu.ca/~nla61/videos/deciem/micro_hide.mp4"></motion.video>
+          </motion.figure>
+
+          <h3>Cautions before checkout</h3>
+          <p className="text-base my-4">
+          Justified warnings about product mixing are presented in Dictionary+ and before checkout at the bottom of the cart as a final review step.
+          </p>
+          <motion.figure 
+          className="@container flex justify-center items-center bg-theme-background mb-8"> 
+                <Image src="/img/deciem/cart.png" width="1512" height="982" alt="Microinteraction: view all cautionary info at the bottom of the cart" className="p-4 @sm:p-8 @lg:p-12"></Image>
+          </motion.figure>
+
+          <motion.figure 
+          className="@container flex justify-center items-center bg-theme-background mb-16"> 
+                <motion.video 
+                className="p-4 @sm:p-8 @lg:p-12"
+                disablePictureInPicture playsInline muted autoPlay loop src="https://www.sfu.ca/~nla61/videos/deciem/micro_checkout.mp4"></motion.video>
+          </motion.figure>
+
         </SideContainer>
       </section>
     </>

@@ -14,21 +14,23 @@ export default function Home() {
       </div>
     </section>
     <section className="col-span-full md:col-span-6 md:col-end-13 lg:mt-8">
-      <Link href="/projects/dictionaryplus">
+      <Link href="/projects/dictionaryplus" scroll={false}>
         <Image 
-          className='mb-4'
           src={"/img/deciem.png"}
           width={1440} 
           height={1024}
           alt="Deciem"/>
+        <h2 className="text-base mt-4 mb-1">Dictionary+</h2>
+        <p className="text-base text-theme-caption mb-16">A 3 week UX design project</p>
       </Link>
-      <Link href="https://google.com">
+      <Link href="/projects/xergoy" scroll={false}>
         <Image 
-          className='mb-4'
           src={"/img/xergoy.png"}
           width={1440} 
           height={1024}
           alt="X Ergo Y"/>
+        <h2 className="text-base mt-4 mb-1">X ergo Y</h2>
+        <p className="text-base text-theme-caption mb-16">Explorations in art direction</p>
       </Link>
     </section>
     </>

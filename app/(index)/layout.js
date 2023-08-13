@@ -1,6 +1,7 @@
 import '/app/globals.css'
 import localFont from 'next/font/local'
- 
+import Footer from '/components/Nav/Footer'
+
 // Font files can be colocated inside of `pages`
 // https://nextjs.org/docs/pages/building-your-application/optimizing/fonts#local-fonts
 const oracle = localFont({ 
@@ -60,7 +61,9 @@ export default function RootLayout({ children }) {
       <body className={`${oracle.className}`}>
         <main className='grid grid-cols-12 gap-x-2 lg:gap-x-4 lg:gap-x-8 px-4 text-theme lg:px-8 max-lg:mt-8'>
           {children}
+          
         </main>
+        <Footer/>
       </body>
     </html>
   )

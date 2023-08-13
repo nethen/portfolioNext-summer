@@ -18,6 +18,8 @@ export default function StyleGuide() {
 
   return (
     <>
+      {/* <div className='bg-blue-500 fixed top-0 left-0 right-4 h-[3.5rem] z-[99999]'></div>
+      <div className='bg-red-500 fixed top-0 left-4 right-0 h-[4rem] z-[99998]'></div> */}
       <Navbar/>
       <section className="col-span-full md:col-span-4 md:sticky md:h-fit md:top-[4.5rem] lg:top-[7.5rem] mb-8">
         <h1>Style guide</h1>
