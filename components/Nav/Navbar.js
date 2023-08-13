@@ -1,15 +1,25 @@
+'use client'
 import Link from 'next/link';
+import { usePathname } from 'next/navigation'
+import { Paths } from "/data/paths"
+
+const useConvertPath = () => {
+    const pathName = usePathname().split("/").slice(-1);
+    return Paths[pathName];
+}
 
 const Navbar = () => {
+    const pathName = useConvertPath();
+    // console.log(pathNameConv);
     return(
         <header className="col-span-full h-fit fixed top-0 left-0 right-0 p-4 lg:p-8 bg-white z-50">
-            <nav className="grid grid-cols-12 gap-x-2 lg:gap-x-4">
-                <div className="col-span-6 sm:col-span-2 flex">
-                    <Link href="/" className="">Nathan Lew</Link>
+            <nav className="grid grid-cols-12 gap-x-2 md:gap-x-4 lg:gap-x-8 ">
+                <div className="col-span-6 sm:col-span-3 lg:col-span-2 flex">
+                    <Link href="/" scroll={false}>Nathan Lew</Link>
                 </div>
-                <p className="hidden sm:block sm:col-span-2 opacity-30">Product designer</p>
+                <p className="hidden sm:block sm:col-span-3 lg:col-span-2 text-theme-caption">Product designer</p>
                 <div className="col-span-6 sm:col-span-3 flex justify-end col-end-13 sm:col-end-13">
-                    <Link href="style" className="">Style guide</Link>
+                    <p className="text-theme-caption">{pathName}</p>
                 </div>
                 
             </nav>

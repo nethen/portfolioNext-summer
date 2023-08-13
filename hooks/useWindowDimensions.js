@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 
 // Code loosely based off https://dev.to/reedbarger/how-to-create-a-usewindowsize-react-hook-2bcm
 
-const useWindowDimensions = () => {
+export const useWindowDimensions = () => {
     const [viewport, setViewport] = useState({
         width: undefined,
         height: undefined,
@@ -23,5 +23,3 @@ const useWindowDimensions = () => {
 
     return viewport;
 }
-
-export default useWindowDimensions;
